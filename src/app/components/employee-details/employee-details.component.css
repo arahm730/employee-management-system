@@ -1,0 +1,38 @@
+h1{
+  text-align: center;
+}
+
+.wrapper{
+  margin: auto;
+  width: 80%;
+}
+
+.employee-full-details {
+  margin: 0 auto;
+  width: 50%;
+  padding-top:3%;
+  padding-bottom:3%;
+  background-color:rgb(0, 252, 176);
+  border-radius: 100px;
+}
+
+.bi-person-circle{
+  margin-left: 40%;
+}
+
+
+.bi-pencil{
+  margin-left: 20%;
+  color: black;
+}
+
+.bi-trash {
+  margin-left: 50%;
+  cursor: pointer;
+}
+
+p {
+  margin-left:25%;
+  font-size:20px;
+  font-weight: bold;
+}

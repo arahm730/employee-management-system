@@ -1,0 +1,26 @@
+<div id="update-employee-div">
+  <h1>Update Employee</h1><br><br>
+  <form *ngIf="employee" #creationForm="ngForm" (ngSubmit)="updateEmployee()">
+    <label>First Name:</label><br>
+    <input type="text" [(ngModel)]="employee.firstName" #firstName="ngModel" name="firstName" required [class.invalid]="firstName.invalid"><br>
+    <div *ngIf="firstName.invalid && firstName.touched">First Name is a required field!</div>
+    <br>
+    <label>Last Name:</label><br>
+    <input type="text" [(ngModel)]="employee.lastName" #lastName="ngModel" name="lastName" required [class.invalid]="lastName.invalid"><br>
+    <div *ngIf="lastName.invalid && lastName.touched">Last Name is a required field!</div>
+    <br>
+    <label>Salary:</label><br>
+    <input type="number" min="0" step="0.01" [(ngModel)]="employee.salary" #salary="ngModel" name="salary" required [class.invalid]="salary.invalid"><br>
+    <div *ngIf="salary.invalid && salary.touched">Salary is a required field!</div>
+    <br>
+    <label>State:</label><br>
+    <input type="text" [(ngModel)]="employee.state" #state="ngModel" name="state" required [class.invalid]="state.invalid"><br>
+    <div *ngIf="state.invalid && state.touched">State is a required field!</div>
+    <br>
+    <label>Country:</label><br>
+    <input type="text" [(ngModel)]="employee.country" #country="ngModel" name="country" required [class.invalid]="country.invalid">
+    <div *ngIf="country.invalid && country.touched">Country is a required field!</div>
+    <br><br>
+    <button type="submit" [disabled]="!creationForm.valid">Update Employee</button>
+  </form>
+</div>

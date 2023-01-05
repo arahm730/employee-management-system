@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+form {
+  margin: 0 auto;
+  width: 50%;
+  padding-top:3%;
+  padding-bottom:3%;
+  background-color:rgb(0, 252, 176);
+  border-radius: 100px;
+}
+
+form div {
+  color: red
+}
+
+label, input, button, form div {
+  margin-left: 30%;
+  font-size:18px;
+}
+
+.invalid {
+  border: 2px solid red;
+}
+
+#update-employee-div {
+  margin:auto;
+  width: 80%;
+}

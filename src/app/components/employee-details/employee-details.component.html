@@ -1,0 +1,16 @@
+<div *ngIf="employee" class="wrapper">
+  <h1>Employee Details</h1>
+  <br />
+  <div class="employee-full-details">
+    <i class="bi bi-person-circle" style="font-size: 150px"></i>
+    <br />
+    <p>Id: {{ employee.id}}</p>
+    <p>First Name: {{ employee.firstName | uppercase }}</p>
+    <p>Last Name: {{ employee.lastName | uppercase }}</p>
+    <p>Salary: {{ employee.salary | currency }}</p>
+    <p>State: {{ employee.state | uppercase }}</p>
+    <p>Country: {{ employee.country | uppercase }}</p><br><br>
+    <a [routerLink]="['/update', employee.id]"><i class="bi bi-pencil" style="font-size: 60px"></i></a>
+    <i class="bi bi-trash" (click)="deleteEmployee()" style="font-size: 60px"></i>
+  </div>
+</div>

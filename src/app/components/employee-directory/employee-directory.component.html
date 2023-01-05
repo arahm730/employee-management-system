@@ -1,0 +1,10 @@
+<div id="employee-directory-div">
+  <h1>Employee Directory</h1>
+  <h2 *ngIf="employees.length === 0">No Employees To Display! Please Add Employees To Directory</h2>
+  <div id="all-employees-div">
+    <div *ngFor="let singleEmployee of employees">
+      <app-employee-overview [employee]="singleEmployee"></app-employee-overview>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<div *ngIf="employee">
+  <br>
+  <i class="bi bi-person-circle" style="font-size: 60px"></i>
+  <br>
+  <br>
+  <p>{{employee.firstName | uppercase}} {{employee.lastName | uppercase}}</p>
+  <p>{{employee.state | uppercase}}</p>
+  <br>
+  <a [routerLink]="['employee', employee.id]">View More Details</a>
+</div>
+

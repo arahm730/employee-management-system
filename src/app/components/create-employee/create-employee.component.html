@@ -1,0 +1,25 @@
+<div id="create-div">
+  <h1>Create an Employee</h1><br><br>
+  <form #creationForm="ngForm" (ngSubmit)="createEmployee(creationForm.value); creationForm.reset()">
+    <label>First Name:</label><br>
+    <input type="text" ngModel #firstName="ngModel" name="firstName" required [class.invalid]="firstName.invalid && firstName.touched"><br>
+    <div *ngIf="firstName.invalid && firstName.touched">First Name is a required field!</div>
+    <br>
+    <label>Last Name:</label><br>
+    <input type="text" ngModel #lastName="ngModel" name="lastName" required [class.invalid]="lastName.invalid && lastName.touched"><br>
+    <div *ngIf="lastName.invalid && lastName.touched">Last Name is a required field!</div>
+    <br>
+    <label>Salary:</label><br>
+    <input type="number" min="0" step="0.01" ngModel #salary="ngModel" name="salary" required [class.invalid]="salary.invalid && salary.touched"><br>
+    <div *ngIf="salary.invalid && salary.touched">Salary is a required field!</div>
+    <br>
+    <label>State:</label><br>
+    <input type="text" ngModel #state="ngModel" name="state" required [class.invalid]="state.invalid && state.touched"><br>
+    <div *ngIf="state.invalid && state.touched">State is a required field!</div>
+    <br>
+    <label>Country:</label><br>
+    <input type="text" ngModel #country="ngModel" name="country" required [class.invalid]="country.invalid && country.touched"><br>
+    <div *ngIf="country.invalid && country.touched">Country is a required field!</div><br>
+    <button type="submit" [disabled]="!creationForm.valid">Create Employee</button>
+  </form>
+</div>
